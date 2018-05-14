@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Memory-Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <h1> Quiz</h1>
+    </header>
+    <main>
+
+        <div class="quiz-box">
+            <div class="question">
+                <p> Kto powinien udzielać pierwszej pomocy?</p>
+            </div>
+            <div class="answer">
+                <button class="answer">Lekarz</button>
+                <button class="answer correct">Każdy</button>
+                <button class="answer">Ratownik medyczny</button>
+            </div>
+            <div class="question">
+                <p> Co to jest AED?</p>
+            </div>
+            <div class="answer">
+                <button class="answer correct">Automatyczny defibrylator zewnętrzny.</button>
+                <button class="answer">Automatyczne uciskanie klatki piersiowej.</button>
+                <button class="answer">Telefon łączący w miejscu publicznym z Ratownictwem Medycznym.</button>
+            </div>
+            <div class="question">
+                <p> Jak sprawdzamy reakcję poszkodowanego?</p>
+            </div>
+            <div class="answer">
+                <button class="answer correct">Pytamy "czy wszystko w porządku?".</button>
+                <button class="answer">Potrząsamy nim.</button>
+                <button class="answer">Pytamy, ile palców widzi.</button>
+            </div>
+            <div class="question">
+                <p>Jaka jest główna zasada reanimacji?</p>
+            </div>
+            <div class="answer">
+                <button class="answer">32 uściski, 1 wdech</button>
+                <button class="answer">2 uściski, 20 wdechów</button>
+                <button class="answer correct">30 uścisków, 2 wdechy</button>
+            </div>
+        </div>
+        <div class="points-box">
+            <div class="points"></div>
+            <button class="check-answer">Sprawdzam odpowiedzi</button>
+            <div class="points hide">Punkty: <span>0</span></div>
+            <button class="good-answers">Pokaż poprawne odpowiedzi</button>
+            <button class="start-new">Zagraj jeszcze raz</button>
+        </div>
+    </main>
+
+    <script src="javascript/js.js"></script>
+</body>
+
+</html>

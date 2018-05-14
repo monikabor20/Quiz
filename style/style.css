@@ -1,0 +1,25 @@
+.selected {
+    background-color: crimson;
+}
+
+.show-correct {
+    background-color: green;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.big-btn {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.points-container {
+    margin-top: 20px;
+}
