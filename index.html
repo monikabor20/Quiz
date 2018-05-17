@@ -6,7 +6,7 @@
     <meta name="description" content="Memory-Game">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/style.css" />
 
@@ -14,53 +14,81 @@
 </head>
 
 <body>
-    <header>
-        <h1> Quiz</h1>
-    </header>
-    <main>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class=" col-lg-12 text-center my-3">
+                    <h1> Quiz</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="quiz-box col-lg-12">
+                <div class="question-box col-lg-8 mx-auto">
+                    <div class="question">
+                        <p> Kto powinien udzielać pierwszej pomocy?</p>
+                    </div>
+                    <img src="img/pacjent.jpg" class="img-fluid">
+                    <div class="answers">
+                        <div class="btn-group-vertical col-lg-12">
+                            <button class="answer btn btn-secondary btn-lg">Lekarz</button>
+                            <button class="answer correct btn btn-secondary btn-lg">Każdy</button>
+                            <button class="answer btn btn-secondary btn-lg">Ratownik medyczny</button>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="quiz-box">
-            <div class="question">
-                <p> Kto powinien udzielać pierwszej pomocy?</p>
-            </div>
-            <div class="answer">
-                <button class="answer">Lekarz</button>
-                <button class="answer correct">Każdy</button>
-                <button class="answer">Ratownik medyczny</button>
-            </div>
-            <div class="question">
-                <p> Co to jest AED?</p>
-            </div>
-            <div class="answer">
-                <button class="answer correct">Automatyczny defibrylator zewnętrzny.</button>
-                <button class="answer">Automatyczne uciskanie klatki piersiowej.</button>
-                <button class="answer">Telefon łączący w miejscu publicznym z Ratownictwem Medycznym.</button>
-            </div>
-            <div class="question">
-                <p> Jak sprawdzamy reakcję poszkodowanego?</p>
-            </div>
-            <div class="answer">
-                <button class="answer correct">Pytamy "czy wszystko w porządku?".</button>
-                <button class="answer">Potrząsamy nim.</button>
-                <button class="answer">Pytamy, ile palców widzi.</button>
-            </div>
-            <div class="question">
-                <p>Jaka jest główna zasada reanimacji?</p>
-            </div>
-            <div class="answer">
-                <button class="answer">32 uściski, 1 wdech</button>
-                <button class="answer">2 uściski, 20 wdechów</button>
-                <button class="answer correct">30 uścisków, 2 wdechy</button>
-            </div>
-        </div>
-        <div class="points-box">
-            <button class="check-answer">Sprawdzam odpowiedzi</button>
-            <div class="points hide">Punkty: <span>0</span></div>
-            <button class="good-answers">Pokaż poprawne odpowiedzi</button>
-            <button class="start-new">Zagraj jeszcze raz</button>
-        </div>
-    </main>
+                <div class="question-box col-lg-8 mx-auto">
+                    <div class="question">
+                        <p> Co to jest AED?</p>
+                    </div>
+                    <img src="img/pomoc4.jpg" class="img-fluid">
+                    <div class="answers">
+                        <div class="btn-group-vertical col-lg-12">
+                            <button class="answer correct btn btn-secondary btn-lg">Automatyczny defibrylator zewnętrzny.</button>
+                            <button class="answer btn btn-secondary btn-lg">Automatyczne uciskanie klatki piersiowej.</button>
+                            <button class="answer btn btn-secondary btn-lg">Telefon łączący w miejscu publicznym z Ratownictwem Medycznym.</button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="question-box col-lg-8 mx-auto">
+                    <div class="question">
+                        <p> Jak sprawdzamy reakcję poszkodowanego?</p>
+                    </div>
+                    <img src="img/pomoc3.jpg" class="img-fluid">
+                    <div class="answers">
+                        <div class="btn-group-vertical col-lg-12">
+                            <button class="answer correct btn btn-secondary btn-lg">Pytamy "czy wszystko w porządku?".</button>
+                            <button class="answer btn btn-secondary btn-lg">Potrząsamy nim.</button>
+                            <button class="answer btn btn-secondary btn-lg">Pytamy, ile palców widzi.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-box col-lg-8 mx-auto">
+                    <div class="question">
+                        <p>Jaka jest główna zasada reanimacji?</p>
+                    </div>
+                    <img src="img/pomoc2.jpg" class="img-fluid">
+                    <div class="answers">
+                        <div class="btn-group-vertical col-lg-12">
+                            <button class="answer btn btn-secondary btn-lg">32 uściski, 1 wdech</button>
+                            <button class="answer btn btn-secondary btn-lg">2 uściski, 20 wdechów</button>
+                            <button class="answer correct btn btn-secondary btn-lg">30 uścisków, 2 wdechy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="points-box mx-auto my-5">
+                    <button class="check-answer btn btn-info btn-md">Sprawdzam odpowiedzi</button>
+                    <button class="good-answers btn btn-info btn-md">Pokaż poprawne odpowiedzi</button>
+                    <button class="start-new btn btn-info btn-md">Zagraj jeszcze raz</button>
+                    <div class="points hide my-5 py-3">Punkty: <span>0</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="javascript/js.js"></script>
 </body>
 

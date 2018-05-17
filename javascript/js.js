@@ -12,7 +12,7 @@ function addPoints() {
     if (this.classList.contains("correct")) {
         allPoints += 1;
     } else {
-        allPoints += 0;
+     allPoints += 0;
     }
 }
 

@@ -1,9 +1,32 @@
-.selected {
-    background-color: crimson;
+.container {
+    background-color: aquamarine;
+}
+
+.question-box {
+    border: 1px solid #383838;
+    margin-top: 30px;
+}
+
+.selected,
+.btn-secondary:hover {
+    background-color: #d37979;
+    border: none;
+    outline: none;
+}
+
+.question {
+    background-color: #4d3d3d;
+    color: white;
+    height: 70px;
+}
+
+.question p {
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 .show-correct {
-    background-color: green;
+    background-color: #4fa54f;
 }
 
 .hide {
@@ -14,12 +37,13 @@
     display: block;
 }
 
-.big-btn {
-    display: block;
-    padding: 10px;
-    margin: 10px 0;
-}
 
 .points-container {
     margin-top: 20px;
+}
+
+.points {
+    font-size: 22px;
+    text-align: center;
+    border: solid 3px red;
 }
