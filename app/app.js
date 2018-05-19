@@ -1,3 +1,52 @@
+jQuery(document).ready(function ($) {
+    var slideCount = $('#slider ul li').length;
+    var slideWidth = $('#slider ul li').width();
+    var slideHeight = $('#slider ul li').height();
+    var sliderUlWidth = slideCount * slideWidth;
+
+    $('#slider').css({
+        width: slideWidth,
+        height: slideHeight
+    });
+
+    $('#slider ul').css({
+        width: sliderUlWidth,
+        marginLeft: -slideWidth
+    });
+
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: +slideWidth
+        }, 100, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: -slideWidth
+        }, 100, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('.prev').click(function () {
+        moveLeft();
+    });
+
+    $('.next').click(function () {
+        moveRight();
+    });
+
+});
+
+
+/* quiz */
+
 var allPoints = 0;
 var answersBtn = document.querySelectorAll(".answer");
 var checkAnswersBtn = document.querySelector(".check-answer");
@@ -12,7 +61,7 @@ function addPoints() {
     if (this.classList.contains("correct")) {
         allPoints += 1;
     } else {
-     allPoints += 0;
+        allPoints += 0;
     }
 }
 

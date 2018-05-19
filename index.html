@@ -1,14 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Memory-Game">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quiz</title>
+    <title>slider</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+
 
 
 </head>
@@ -22,74 +25,158 @@
                 </div>
             </div>
         </header>
-        <main>
-            <div class="quiz-box col-lg-12">
-                <div class="question-box col-lg-8 mx-auto">
-                    <div class="question">
-                        <p> Kto powinien udzielać pierwszej pomocy?</p>
-                    </div>
-                    <img src="img/pacjent.jpg" class="img-fluid">
-                    <div class="answers">
-                        <div class="btn-group-vertical col-lg-12">
-                            <button class="answer btn btn-secondary btn-lg">Lekarz</button>
-                            <button class="answer correct btn btn-secondary btn-lg">Każdy</button>
-                            <button class="answer btn btn-secondary btn-lg">Ratownik medyczny</button>
+        <div id="slider" class="slider col-lg-6 col-md-6">
+            <i class="arrow prev fa fa-chevron-left fa-3x"></i>
+            <i class="arrow next fa fa-chevron-right fa-3x"></i>
+            <ul>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Kto powinien udzielać pierwszej pomocy?</p>
+                        </div>
+                        <img src="img/pacjent.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md">Lekarz</button>
+                                <button class="answer correct btn btn-secondary btn-md">Każdy</button>
+                                <button class="answer btn btn-secondary btn-md">Ratownik medyczny</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Co to jest AED?</p>
+                        </div>
+                        <img src="img/pomoc4.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer correct btn btn-secondary btn-md">Automatyczny defibrylator zewnętrzny.</button>
+                                <button class="answer btn btn-secondary btn-md">Automatyczne uciskanie klatki piersiowej.</button>
+                                <button class="answer btn btn-secondary btn-md">Telefon łączący w miejscu publicznym z Ratownictwem Medycznym.</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Jak sprawdzamy reakcję poszkodowanego?</p>
+                        </div>
+                        <img src="img/pomoc3.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer correct btn btn-secondary btn-md">Pytamy "czy wszystko w porządku?".</button>
+                                <button class="answer btn btn-secondary btn-md">Potrząsamy nim.</button>
+                                <button class="answer btn btn-secondary btn-md">Pytamy, ile palców widzi.</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p>Jaka jest główna zasada reanimacji?</p>
+                        </div>
+                        <img src="img/pomoc2.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md">32 uściski, 1 wdech</button>
+                                <button class="answer btn btn-secondary btn-md">2 uściski, 20 wdechów</button>
+                                <button class="answer correct btn btn-secondary btn-md">30 uścisków, 2 wdechy</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Co jako pierwsze powinno się zrobić na miejscu wypadku?</p>
+                        </div>
+                        <img src="img/ucisk.png" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md">Wezwać pomoc</button>
+                                <button class="answer correct btn btn-secondary btn-md">Upewnić się, czy poszkodowany i wszyscy świadkowie zdarzenia są bezpieczni</button>
+                                <button class="answer btn btn-secondary btn-md">Przystąpić do reanimacji</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Co znajduje się w podstawowym wyposażeniu apteczki pierwszej pomocy?</p>
+                        </div>
+                        <img src="img/apteczka.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md">Kołnierz szyjny</button>
+                                <button class="answer correct btn btn-secondary btn-md">Zestaw plastrów</button>
+                                <button class="answer btn btn-secondary btn-md">Stetoskop</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> W przypadku krwawienia z nosa należy:</p>
+                        </div>
+                        <img src="img/karetka.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer correct btn btn-secondary btn-md">Pochylić głowę krwawiącego mocno do przodu, ucisnąć skrzydełka nosa</button>
+                                <button class="answer btn btn-secondary btn-md"> Położyć poszkodowanego na plecach</button>
+                                <button class="answer btn btn-secondary btn-md"> odchylić głowę do tyłu i położyć zimny kompres na kark</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Bezpośrednio po stwierdzeniu u dziecka braku oddechu należy:</p>
+                        </div>
+                        <img src="img/pomoc-apteczka.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md"> Samemu zadzwonić po ambulans</button>
+                                <button class="answer btn btn-secondary btn-md"> Ocenić krążenie</button>
+                                <button class="answer correct btn btn-secondary btn-md">Wykonać 5 skutecznych wdechów</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="question-box col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="question">
+                            <p> Pierwszy krok w postępowaniu z ofiarą zatrucia czadem to:</p>
+                        </div>
+                        <img src="img/lekarz.jpg" class="img-fluid">
+                        <div class="answers">
+                            <div class="btn-group-vertical col-lg-12">
+                                <button class="answer btn btn-secondary btn-md">Przeprowadzenie badania wstępnego</button>
+                                <button class="answer btn btn-secondary btn-md"> Zebranie wywiadu</button>
+                                <button class="answer correct btn btn-secondary btn-md">Usunięcie ofiary z toksycznej atmosfery</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
-                <div class="question-box col-lg-8 mx-auto">
-                    <div class="question">
-                        <p> Co to jest AED?</p>
-                    </div>
-                    <img src="img/pomoc4.jpg" class="img-fluid">
-                    <div class="answers">
-                        <div class="btn-group-vertical col-lg-12">
-                            <button class="answer correct btn btn-secondary btn-lg">Automatyczny defibrylator zewnętrzny.</button>
-                            <button class="answer btn btn-secondary btn-lg">Automatyczne uciskanie klatki piersiowej.</button>
-                            <button class="answer btn btn-secondary btn-lg">Telefon łączący w miejscu publicznym z Ratownictwem Medycznym.</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-box col-lg-8 mx-auto">
-                    <div class="question">
-                        <p> Jak sprawdzamy reakcję poszkodowanego?</p>
-                    </div>
-                    <img src="img/pomoc3.jpg" class="img-fluid">
-                    <div class="answers">
-                        <div class="btn-group-vertical col-lg-12">
-                            <button class="answer correct btn btn-secondary btn-lg">Pytamy "czy wszystko w porządku?".</button>
-                            <button class="answer btn btn-secondary btn-lg">Potrząsamy nim.</button>
-                            <button class="answer btn btn-secondary btn-lg">Pytamy, ile palców widzi.</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="question-box col-lg-8 mx-auto">
-                    <div class="question">
-                        <p>Jaka jest główna zasada reanimacji?</p>
-                    </div>
-                    <img src="img/pomoc2.jpg" class="img-fluid">
-                    <div class="answers">
-                        <div class="btn-group-vertical col-lg-12">
-                            <button class="answer btn btn-secondary btn-lg">32 uściski, 1 wdech</button>
-                            <button class="answer btn btn-secondary btn-lg">2 uściski, 20 wdechów</button>
-                            <button class="answer correct btn btn-secondary btn-lg">30 uścisków, 2 wdechy</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="row">
+            <div class="points-box mx-auto my-5">
+                <button class="check-answer btn btn-info btn-md">Sprawdzam odpowiedzi</button>
+                <button class="good-answers btn btn-info btn-md">Pokaż poprawne odpowiedzi</button>
+                <button class="start-new btn btn-info btn-md">Zagraj jeszcze raz</button>
+                <div class="points hide my-5 py-3">Punkty: <span>0</span></div>
             </div>
-            <div class="row">
-                <div class="points-box mx-auto my-5">
-                    <button class="check-answer btn btn-info btn-md">Sprawdzam odpowiedzi</button>
-                    <button class="good-answers btn btn-info btn-md">Pokaż poprawne odpowiedzi</button>
-                    <button class="start-new btn btn-info btn-md">Zagraj jeszcze raz</button>
-                    <div class="points hide my-5 py-3">Punkty: <span>0</span></div>
-                </div>
-            </div>
-        </main>
+        </div>
     </div>
-    <script src="javascript/js.js"></script>
+    <script src="app/app.js"></script>
 </body>
 
 </html>
