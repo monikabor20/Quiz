@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>slider</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -21,7 +25,7 @@
         <header>
             <div class="row">
                 <div class=" col-lg-12 text-center my-3">
-                    <h1> Quiz</h1>
+                    <h3> Quiz</h3>
                 </div>
             </div>
         </header>
@@ -215,7 +219,7 @@
                 </li>
                 <li>
                     <div class="row">
-                        <div class="question-box question-box-last col-8 mx-auto">
+                        <div class="question-box col-8 mx-auto" id="question-box-last">
                             <div class="row">
                                 <div class="question col-12 my-3">
                                     <p> Pierwszy krok w postępowaniu z ofiarą zatrucia czadem to:</p>
@@ -243,9 +247,34 @@
                 <button class="check-answer btn btn-info btn-md">Sprawdzam odpowiedzi</button>
                 <button class="good-answers btn btn-info btn-md">Pokaż poprawne odpowiedzi</button>
                 <button class="start-new btn btn-info btn-md">Zagraj jeszcze raz</button>
-                <div class="points hide my-5 py-3">Punkty: <span>0</span></div>
             </div>
         </div>
+
+        <div class="custom-model-main">
+            <div class="custom-model-inner">
+                <div class="close-btn">X</div>
+                <div class="custom-model-wrap">
+                    <div class="pop-up-content-wrap">
+                        Zobacz ile zdobywasz punktów i sprawdź poprawne odpowiedzi klikając opcje poniżej!
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+
+        <div class="custom-model-main-two">
+            <div class="custom-model-inner">
+                <div class="close-btn">X</div>
+                <div class="custom-model-wrap">
+                    <div class="pop-up-content-wrap">
+                        <div class="points hide my-5 py-3">Punkty: <span>0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+
+
     </div>
     <script src="app/app.js"></script>
 </body>

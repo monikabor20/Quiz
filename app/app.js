@@ -101,3 +101,22 @@ checkAnswersBtn.addEventListener("click", showPoints);
 startNew.addEventListener("click", clearAll);
 
 showGodAnswersBtn.addEventListener("click", showCorrectAnswers);
+
+
+
+
+$("#question-box-last").on('click', function () {
+    $(".custom-model-main").addClass('model-open');
+});
+$(".close-btn, .bg-overlay").click(function () {
+    $(".custom-model-main").removeClass('model-open');
+});
+
+
+
+$(".check-answer").on('click', function () {
+    $(".custom-model-main-two").addClass('model-open');
+});
+$(".close-btn, .bg-overlay").click(function () {
+    $(".custom-model-main-two").removeClass('model-open');
+});
